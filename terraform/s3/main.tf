@@ -19,7 +19,7 @@ data "aws_iam_user" "input_user" {
 
 resource "aws_s3_bucket" "bucket" {
   bucket = var.name
-  acl    = "public-read"
+  aws_s3_bucket_acl    = "public-read"
   force_destroy = true
 
   tags = {
