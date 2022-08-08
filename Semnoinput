@@ -1,0 +1,26 @@
+spec_version: 2-preview
+
+description: something
+
+inputs:
+  compute_service_name:
+    type: string
+    default: "vcenter-mock"
+    display-style: normal
+  input1:
+    
+
+grains:
+  simple-tf:
+    kind: terraform
+    spec:
+      source:
+        path: github.com/QualiNext/test-spec2-public.git//terraform/simple-tf-module
+      host:
+        cloud-account: private-cloud
+        compute-service: '{{.inputs.compute_service_name}}'
+      inputs:
+        
+      ouputs:
+        - output1
+        - output2
