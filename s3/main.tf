@@ -17,7 +17,7 @@ data "aws_iam_user" "input_user" {
   user_name = var.user
 }
 
-resource "aws_s3_bucket" "bucket" {
+resource "aws_s3_bucket" "bucket" #{
   bucket = var.name
   acl    = "private"
   force_destroy = true
