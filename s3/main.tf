@@ -18,7 +18,7 @@ data "aws_iam_user" "input_user" {
 }
 
 resource "aws_s3_bucket" "bucket" {
-  bucket = "name-changed" #var.name
+  bucket = "asaf-loves-this-bucket" #var.name
   acl    = "public-read"
   force_destroy = true
 
