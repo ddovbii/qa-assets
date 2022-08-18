@@ -18,7 +18,7 @@ data "aws_iam_user" "input_user" {
 }
 
 resource "aws_s3_bucket" "bucket" {
-  bucket = "change named" #var.name
+  bucket = "name-changed" #var.name
   acl    = "private"
   force_destroy = true
 
