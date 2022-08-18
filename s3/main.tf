@@ -25,7 +25,7 @@ resource "aws_s3_bucket" "bucket" {
   tags = {
     Name        = "I changed again"
     Environment = "Dev"
-    AMAZING_TAG = "AMAZING_VALUE"
+    AMAZING_TAG = "AMAZING_VALUE2"
   }
 }
 
