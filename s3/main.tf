@@ -29,19 +29,6 @@ resource "aws_s3_bucket" "bucket" {
   }
 }
 
-resource "aws_s3_bucket" "bucket2" {
-  bucket = var.name
-  acl    = "private"
-  force_destroy = true
-
-  tags = {
-    Name        = "I changed"
-    Environment = "Dev"
-    AMAZING_TAG = "AMAZING_VALUE"
-  }
-}
-
-
 # CREATE USER and POLICY
 resource "aws_iam_policy" "policy" {
   count = "${var.user == "none" ? 0 : 1}"
