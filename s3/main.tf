@@ -66,6 +66,18 @@ resource "aws_iam_user_policy_attachment" "attachment" {
     policy_arn = aws_iam_policy.policy[0].arn
 }
 
+resource "aws_s3_bucket" "bucket2" {
+  bucket = "asaf-bucket-wow2" #var.name
+  acl    = "private"
+  force_destroy = true
+
+  tags = {
+    Name        = "I changed"
+    Environment = "Dev"
+    AMAZING_TAG = "AMAZING_VALUE"
+  }
+}
+
 output "s3_bucket_arn" {
   value = aws_s3_bucket.bucket.arn
 }
