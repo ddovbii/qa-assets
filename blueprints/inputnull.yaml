@@ -17,7 +17,7 @@ inputs:
   helm_namespace:
     type: string
 #     default: sveta-test
-   input2:null
+#   input2:null
 #     type: string
 #     description: "environemnt input 2" 
        
