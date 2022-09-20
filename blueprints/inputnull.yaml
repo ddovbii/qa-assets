@@ -1,0 +1,84 @@
+spec_version: 2-preview
+
+description: description text
+
+
+
+inputs:
+  input1:
+    type: string
+    sensitive: true
+    default: "default1"
+    description: "environemnt input 1"
+  compute_service_name:
+    type: string
+#     sensitive: true
+    default: "eks-sem"
+  helm_namespace:
+    type: string
+#     default: sveta-test
+   input2:null
+#     type: string
+#     description: "environemnt input 2" 
+       
+
+
+# values that starts with '{' for liquid template must be encosed with quotes so YAML won't consider them as dict
+outputs:
+  output1:
+    value: '{{sandboxId}}'
+  output2:
+    value: '{{.inputs.input1}}'
+#   output3:
+#     value: '{{.grains.helloTF.outputs.output1}}'
+    
+
+grains:
+  helloTF:
+    kind: terraform
+    spec:
+      source:
+        store: test-spec2-public
+        path: terraform/simple-tf-module
+      host:
+        name: '{{.inputs.compute_service_name}}'
+      inputs:
+        - test_input1: env-input-{{.inputs.input1}}
+        - test_input2: env-id-{{sandboxId}}
+      ouputs:
+        - output1
+        - output2
+
+
+
+  helloHelm:
+    kind: helm
+#     depends-on: helloTF
+    spec:
+      source:
+        path: https://github.com/bitnami/charts.git//bitnami/node
+      host:
+        name: '{{.inputs.compute_service_name}}'
+      namespace: '{{inputs.helm_namespace}}'
+      commands:
+        - "dep up bitnami/node"
+
+      inputs:
+        - nameOverride: '{{.inputs.input1}}'
+        #- nameOverride: '{{.grains.helloTF.outputs.output1}}'
+  
+  # helloHelm2:
+  #   kind: helm
+  #   #depends-on: helloTF
+  #   spec:
+  #     source:
+  #       path: https://github.com/bitnami/charts.git//bitnami/node
+  #     host:
+  #       cloud-account: aws
+  #       compute-service: '{{.inputs.compute_service_name}}'
+  #     commands:
+  #       - "dep up bitnami/node"
+
+  #     inputs:
+  #       - nameOverride: ahoi
+  #       #- nameOverride: '{{.grains.helloTF.outputs.output1}}'
