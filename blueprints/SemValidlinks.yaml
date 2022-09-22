@@ -9,7 +9,8 @@ grains:
       host:
         name: eks-sem4
       source:
-        path: https://github.com/atlassian/data-center-helm-charts.git//src/main/charts/jira  terraform-test2:
+        path: https://github.com/atlassian/data-center-helm-charts.git//src/main/charts/jira  
+   terraform-test2:
     kind: terraform
     spec:
       host:
@@ -22,7 +23,8 @@ grains:
       host:
         name: eks-sem4
       source:
-        path: git::https://token@github.com:user/QualiTorque/samples.git//helm/nginx  terraform-test4:
+        path: git::https://token@github.com:user/QualiTorque/samples.git//helm/nginx  
+   terraform-test4:
     kind: terraform
     spec:
       host:
@@ -36,7 +38,8 @@ grains:
       host:
         name: eks-sem4
       source:
-        path: https://192.168.101.127/user/project.git  terraform-test6:
+        path: https://192.168.101.127/user/project.git  
+  terraform-test6:
     kind: terraform
     spec:
       host:
@@ -57,7 +60,8 @@ grains:
       host:
         name: eks-sem4
       source:
-        path: https://github.com/QualiNext/test-spec2-public//terraform/s3  terraform-test9:
+        path: https://github.com/QualiNext/test-spec2-public//terraform/s3  
+   terraform-test9:
     kind: terraform
     spec:
       host:
