@@ -1,0 +1,83 @@
+[14:59] Rann Lifshitz
+These are good paths:
+@"spec_version: 2-preview
+inputs:
+  store-name:
+    type: string
+grains:
+  terraform-test1:
+    kind: terraform
+    spec:
+      host:
+        name: eks
+      source:
+        path: https://github.com/atlassian/data-center-helm-charts.git//src/main/charts/jira  terraform-test2:
+    kind: terraform
+    spec:
+      host:
+        name: eks
+      source:
+        path: github.com/Quali_Next+/test-spec2-public.git//terraform~/oci-instance
+  terraform-test3:
+    kind: terraform
+    spec:
+      host:
+        name: eks
+      source:
+        path: git::https://token@github.com:user/QualiTorque/samples.git//helm/nginx  terraform-test4:
+    kind: terraform
+    spec:
+      host:
+        name: eks
+      source:
+        store: '{{.inputs.store-name}}'
+        path: /helm/nginx/var_1/hello
+  terraform-test5:
+    kind: terraform
+    spec:
+      host:
+        name: eks
+      source:
+        path: https://192.168.101.127/user/project.git  terraform-test6:
+    kind: terraform
+    spec:
+      host:
+        name: eks
+      source:
+        store: '{{.inputs.store-name}}'
+        path: /
+  terraform-test7:
+    kind: terraform
+    spec:
+      host:
+        name: eks
+      source:
+        path: github.com/QualiNext/test-spec2-public//terraform/s3
+  terraform-test8:
+    kind: terraform
+    spec:
+      host:
+        name: eks
+      source:
+        path: https://github.com/QualiNext/test-spec2-public//terraform/s3  terraform-test9:
+    kind: terraform
+    spec:
+      host:
+        name: eks
+      source:
+        path: github.com/QualiNext/test-spec2-public/terraform/s3
+  terraform-test10:
+    kind: terraform
+    spec:
+      host:
+        name: eks
+      source:
+        path: blueprints\deploy-s3-two-buckets.yaml
+  terraform-test11:
+    kind: terraform
+    spec:
+      host:
+        name: eks
+      source:
+        path: https://quali-dannyk-storage.s3.amazonaws.com/AWSS3Bucket_in_out.json";
+

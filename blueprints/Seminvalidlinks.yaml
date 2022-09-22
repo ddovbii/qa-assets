@@ -1,0 +1,45 @@
+spec_version: 2-preview
+grains:
+  terraform-test-2:
+    kind: terraform
+    spec:
+      host:
+        name: eks-sem4
+      source:
+        path: git::.git
+  terraform-test-3:
+    kind: terraform
+    spec:
+      host:
+        name: eks
+      source:
+        path: git://host.xz/path/to/repo.git/
+  terraform-test-4:
+    kind: terraform
+    spec:
+      host:
+        name: eks-sem4
+      source:
+        path: ssh://user@host.xz/path/to/repo.git/
+  terraform-test-5:
+    kind: terraform
+    spec:
+      host:
+        name: eks
+      source:
+        path: git@github.com:atlassian/data-center-helm-charts.git//src/main/charts/jira
+  terraform-test-6:
+    kind: terraform
+    spec:
+      host:
+        name: eks-sem4
+      source:
+        path: hey@ho.com/hello/project.git//sss/({})
+  terraform-test-7:
+    kind: terraform
+    spec:
+      host:
+        name: eks
+      source:
+        path: hey@ho.com/hello/project.git//sss/!@#$%^&*
+";
