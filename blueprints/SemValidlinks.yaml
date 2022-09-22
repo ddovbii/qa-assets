@@ -3,7 +3,7 @@ inputs:
   store-name:
     type: string
 grains:
-  terraform-test1:
+ terraform-test1:
     kind: terraform
     spec:
       host:
