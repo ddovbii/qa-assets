@@ -32,7 +32,7 @@ grains:
       source:
         store: '{{.inputs.store-name}}'
         path: /helm/nginx/var_1/hello
-  terraform-test5:
+     terraform-test5:
     kind: terraform
     spec:
       host:
@@ -81,5 +81,5 @@ grains:
       host:
         name: eks-sem4
       source:
-        path: https://quali-dannyk-storage.s3.amazonaws.com/AWSS3Bucket_in_out.json"
+        path: https://quali-dannyk-storage.s3.amazonaws.com/AWSS3Bucket_in_out.json
 
