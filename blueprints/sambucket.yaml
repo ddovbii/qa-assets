@@ -38,8 +38,8 @@ grains:
         - acl: private
         - name: 'amazing-bucket-2-s3-{{ sandboxid | downcase }}'
       outputs:
-        - s3_bucket_arn
-
+        - s3_bucket_arn 
+ 
   bucket_3:
     kind: terraform
     spec: 
