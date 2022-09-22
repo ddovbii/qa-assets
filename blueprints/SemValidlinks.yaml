@@ -24,7 +24,7 @@ grains:
         name: eks-sem4
       source:
         path: git::https://token@github.com:user/QualiTorque/samples.git//helm/nginx  
-   terraform-test4:
+  terraform-test4:
     kind: terraform
     spec:
       host:
