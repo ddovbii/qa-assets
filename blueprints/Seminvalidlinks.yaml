@@ -11,7 +11,7 @@ grains:
     kind: terraform
     spec:
       host:
-        name: eks
+        name: eks-sem4
       source:
         path: git://host.xz/path/to/repo.git/
   terraform-test-4:
@@ -25,7 +25,7 @@ grains:
     kind: terraform
     spec:
       host:
-        name: eks
+        name: eks-sem4
       source:
         path: git@github.com:atlassian/data-center-helm-charts.git//src/main/charts/jira
   terraform-test-6:
@@ -39,7 +39,6 @@ grains:
     kind: terraform
     spec:
       host:
-        name: eks
+        name: eks-sem4
       source:
         path: hey@ho.com/hello/project.git//sss/!@#$%^&*
-";
