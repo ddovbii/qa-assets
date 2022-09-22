@@ -17,7 +17,7 @@ grains:
         name: eks-sem4
       source:
         path: github.com/Quali_Next+/test-spec2-public.git//terraform~/oci-instance
-  terraform-test3:
+ terraform-test3:
     kind: terraform
     spec:
       host:
