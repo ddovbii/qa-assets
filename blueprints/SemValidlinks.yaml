@@ -32,7 +32,7 @@ grains:
       source:
         store: '{{.inputs.store-name}}'
         path: /helm/nginx/var_1/hello
-  terraform-test5:
+ terraform-test5:
     kind: terraform
     spec:
       host:
