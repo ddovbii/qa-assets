@@ -10,7 +10,7 @@ grains:
         name: eks-sem4
       source:
         path: https://github.com/atlassian/data-center-helm-charts.git//src/main/charts/jira  
-  terraform-test2:
+ terraform-test2:
     kind: terraform
     spec:
       host:
