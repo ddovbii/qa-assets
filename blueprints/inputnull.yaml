@@ -13,7 +13,7 @@ inputs:
   compute_service_name:
     type: string
 #     sensitive: true
-    default: "eks-sem"
+    default: "eks-sem4"
   helm_namespace:
     type: string
 #     default: sveta-test
