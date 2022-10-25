@@ -11,7 +11,7 @@ jobs:
     steps:
     - name: Validate Blueprints
       id: validate
-      uses: QualiTorque/torque-validate-bp-action@master
+      uses: QualiTorque/torque-validate-bp-action@bug/list-blueprints
       with:
         space: dev
         torque_token: ${{ secrets.TORQUE_TOKEN }}
