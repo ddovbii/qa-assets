@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - uses: actions/checkout@v2
     - name: Validate Blueprints
       id: validate
       uses: QualiTorque/torque-validate-bp-action@bug/list-blueprints
