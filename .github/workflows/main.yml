@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: Validate Blueprints
       id: validate
-      uses: QualiTorque/torque-validate-blueprints@v1
+      uses: QualiTorque/torque-validate-blueprints@v1.0.1
       with:
         space: dev
         torque_token: ${{ secrets.TORQUE_TOKEN }}
